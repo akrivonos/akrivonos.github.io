@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FB link sharer</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+  <script>
+    $(window).load(function(){
+      $('input').change(function () {
+          $('a#share').attr('href', 'https://www.facebook.com/dialog/feed?app_id=671551016270846&' + $('form').serialize() + '&redirect_uri=http://alephbeta.org&display=popup');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>FB link sharer</h1>
+  <form>
+    Link to share URL: <input input type="text" name="link"><br />
+    Image URL: <input input type="text" name="picture"><br />
+    Caption: <input input type="text" name="caption"><br />
+    Description: <input input type="text" name="description"><br />
+  </form>
+  <br />
+  <a id="share" href="#" target="_blank">Share</a>
+
+</body>
